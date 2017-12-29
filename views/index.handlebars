@@ -1,5 +1,14 @@
-<div class="column">
-    <img class="thumbnail" src="http://placehold.it/550x550">
-    <h5>My Site</h5>
-</div>
+{{#if projects}}
+	{{#each projects}}
+
+		<div class="column">
+    		<img class="thumbnail" src="/images/portfolio/{{image}}">
+    		<h5>{{title}}</h5>
+    		<p class="show"><a href="/details/{{id}}">Show More</a></p>
+		</div>
+	{{/each}}
+{{else}}
+	<p>No projects</p>
+
+{{/if}}
             
